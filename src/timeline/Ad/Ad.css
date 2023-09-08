@@ -1,0 +1,73 @@
+/* Ad.module.css */
+.Ad_card {
+  display: flex;
+  flex-direction: column;
+  width: 550px; /* Set your desired width */
+  border: 1px solid #e0e0e0;
+  margin: 30px 40px 50px 40px;
+
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05); /* Add a hover effect */
+  }
+
+  /* Ad.css */
+
+.Ad_media {
+  /* Your media styles here */
+   width: 550; 
+   height: 300px; 
+  object-fit: scale-down; /* Maintain aspect ratio and cover the container */
+}
+
+}
+
+/* .Ad_media {
+  height: 500px; /* Set your desired height */
+  /* object-fit: contain; */
+/* } */ */
+
+.Ad_content {
+  padding: 16px;
+}
+
+.Ad_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.Ad_description {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.Ad_price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.Ad_personalizedText {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.Ad_personalizedText_content {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.Ad_footerText {
+  font-size: 0.9rem;
+  color: #777;
+  padding: 8px;
+  text-align: center;
+}
