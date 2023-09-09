@@ -28,6 +28,20 @@
   border-radius: 15px;
   width: 100%;
 }
+.userInfo{
+  display: flex;
+    flex-direction: row;
+}
+.avatar{
+  display: flex;
+  padding: 15px;
+  align-items: center;
+
+}
+
+.avatar-name{
+  margin-top: 22px;
+}
 
 .sidenav__button:hover {
   cursor: pointer;

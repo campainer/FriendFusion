@@ -16,6 +16,7 @@ import { auth } from "../firebase";
 
 function Sidenav() {
   const user = useSelector((state) => state.data.user.user);
+  console.log("user",user.email)
   const dispatch = useDispatch();
   const handelLogout = () => {
     dispatch(logoutUser());
@@ -58,15 +59,31 @@ function Sidenav() {
           <AddCircleOutlineIcon />
           <span>Create</span>
         </button>
-        <button className="sidenav__button">
-          <Avatar>
-            {user.username ? user.username.charAt(0).toUpperCase() : "A"}
+        <div className="userInfo">
+          <div  className="avatar">
+        <Avatar>
+            {user.email ? user.email.charAt(0).toUpperCase() : "Ghost"}
           </Avatar>
+          </div>
+
+
+          <div class = "avatar-name">
+    {user.email ? user.email.split('@')[0] : "Ghost"} {/* Display the part before "@" */}
+  </div>
+  </div>
+        <button className="sidenav__button">
+          {console.log("avatar:", user.email )}
+         
+         
           <span>
-            {user.username}{" "}
+          {/* {user.email ? user.email.split('@')[0] : "Ghost"} */}
+
+         
+  <div>
             <button onClick={handelLogout} className="logout__button">
               Logout
             </button>
+            </div>
           </span>
         </button>
       </div>

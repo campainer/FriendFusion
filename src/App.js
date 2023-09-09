@@ -36,7 +36,7 @@ function App() {
           <div class="loader"></div>
         </div>
       ) : (
-        <>{user ? <Homepage /> : <Authenticate />}</>
+        <>{user ? <Homepage user={user}/> : <Authenticate />}</>
       )}
     </div>
   );

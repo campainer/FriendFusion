@@ -14,13 +14,16 @@
     transform: scale(1.05); /* Add a hover effect */
   }
 
+  .css-46bh2p-MuiCardContent-root {
+    padding: 10px;
+}
   /* Ad.css */
 
 .Ad_media {
   /* Your media styles here */
    width: 550; 
    height: 300px; 
-  object-fit: scale-down; /* Maintain aspect ratio and cover the container */
+  object-fit: contain; /* Maintain aspect ratio and cover the container */
 }
 
 }
@@ -28,33 +31,53 @@
 /* .Ad_media {
   height: 500px; /* Set your desired height */
   /* object-fit: contain; */
-/* } */ */
+/* } */ 
 
 .Ad_content {
-  padding: 16px;
+  padding: 0px;
 }
 
 .Ad_title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-family: "Arial", sans-serif; /* Change the font family */
+  font-size: 1.5rem; /* Increase font size for a stronger visual impact */
+  font-weight: 600; /* Use a bolder font weight */
+  margin-bottom: 12px; /* Slightly increase margin for better spacing */
+  color: #333; /* Change font color to a dark shade for contrast */
 }
 
 .Ad_description {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 12px;
+  font-family: "Helvetica", sans-serif; /* Change the font family */
+  font-size: 1rem; /* Keep the font size readable but not too small */
+  color: #555; /* Slightly adjust text color for readability */
+  margin-bottom: 16px; /* Increase margin for better separation */
 }
 
 .Ad_price {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 12px;
+  font-family: "Georgia", serif; /* Change the font family */
+  font-size: 2.2rem; /* Increase font size for emphasis */
+  font-weight: 700; /* Use a stronger font weight */
+  color: #FF5733; /* Apply a contrasting color for price */
+  margin-bottom: 16px; /* Increase margin for better separation */
 }
 
+.Ad_link {
+  background-color: lightblue;
+  padding: 8px 16px; /* Add padding for better styling */
+  text-decoration: none; /* Remove underline by default for links */
+  color: #333; /* Set link color */
+  font-weight: bold;
+  border-radius: 0px; /* Add rounded corners */
+}
+
+.Ad_link:hover {
+  background-color: #5fa2db; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+
+
 .Ad_personalizedText {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 8px;
   border-radius: 4px;
   margin-top: 12px;

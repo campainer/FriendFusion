@@ -11,31 +11,37 @@ function Ad({ title, description, price, image_url, ad_url, personalizedText, fo
         image={image_url}
         className="Ad_media"
       />
+      <div className='Ad_link'>
+        {ad_url && (
+          <Link href={ad_url} target="_blank" rel="noopener noreferrer" >
+            Learn More
+          </Link>
+        )}
+      </div>
+      <div className="Ad_personalizedText">
+        {personalizedText !== null && (
+
+          <Typography variant="body2" fontWeight="bold" className="Ad_personalizedText_content">
+            {personalizedText}
+          </Typography>
+
+        )}
+      </div>
+   
       <CardContent className="Ad_content">
         <Typography variant="subtitle1" className="Ad_title">
           {title}
         </Typography>
-        <Typography variant="body2" color="textSecondary" className="Ad_description">
+        <Typography variant="body2"  style={{ fontWeight: 'semi-bold' }}color="textSecondary" className="Ad_description">
           {description}
         </Typography>
-        <Typography variant="body1" className="Ad_price">
+        <Typography variant="body1" style={{ fontWeight: 'bold' }}  className="Ad_price">
           Price: ${price}
         </Typography>
-        {ad_url && (
-          <Link href={ad_url} target="_blank" rel="noopener noreferrer">
-            Learn More
-          </Link>
-        )}
 
-{personalizedText !== null && (
-        <div className="Ad_personalizedText">
-          <Typography variant="body2" className="Ad_personalizedText_content">
-            {personalizedText}
-          </Typography>
-        </div>
-      )}
+
       </CardContent>
-      
+
       {footerText && (
         <CardActions>
           <Typography variant="body2" className="Ad_footerText">
