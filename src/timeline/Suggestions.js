@@ -10,10 +10,36 @@ function Suggestions() {
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>A</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
+              <span className="username">Anand</span>
+              <span className="relation">New to Instagram</span>
+            </div>
+          </div>
+          <button className="follow__button">Follow</button>
+        </div>
+
+        <div className="suggestions__username">
+          <div className="username__left">
+            <span className="avatar">
+              <Avatar>W</Avatar>
+            </span>
+            <div className="username__info">
+              <span className="username">Wasi</span>
+              <span className="relation">New to Instagram</span>
+            </div>
+          </div>
+          <button className="follow__button">Follow</button>
+        </div>
+
+        <div className="suggestions__username">
+          <div className="username__left">
+            <span className="avatar">
+              <Avatar>J</Avatar>
+            </span>
+            <div className="username__info">
+              <span className="username">Jyoti</span>
               <span className="relation">New to Instagram</span>
             </div>
           </div>
@@ -26,33 +52,7 @@ function Suggestions() {
               <Avatar>R</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
-            </div>
-          </div>
-          <button className="follow__button">Follow</button>
-        </div>
-
-        <div className="suggestions__username">
-          <div className="username__left">
-            <span className="avatar">
-              <Avatar>R</Avatar>
-            </span>
-            <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
-            </div>
-          </div>
-          <button className="follow__button">Follow</button>
-        </div>
-
-        <div className="suggestions__username">
-          <div className="username__left">
-            <span className="avatar">
-              <Avatar>R</Avatar>
-            </span>
-            <div className="username__info">
-              <span className="username">redian_</span>
+              <span className="username">Rahul</span>
               <span className="relation">New to Instagram</span>
             </div>
           </div>

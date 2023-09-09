@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
-// import { Suspense, lazy } from "react";
 import Post from "./Post/Post";
 import "./Timeline.css";
 import Ad from "./Ad/Ad";
-import {getDocs,collection} from "firebase/firestore";
-import { db } from "../firebase";
 import {generateRandomPost} from "../helper/generatePosts"
-import { combineReducers } from "redux";
+import { useSelector } from "react-redux";
+import axios from "axios";
+
 
 function Timeline() {
   const [posts, setPosts] = useState([]); 
-  const [response, setResponse] = useState([{}]); 
-  const productCollectionRef =collection(db,"products")
+  const user = useSelector((state) => state.data.user.user);
 
   const fetchRandomPosts = () => {
-    return Array.from({ length: 50 }, () => generateRandomPost());
+    return Array.from({ length: 10 }, () => generateRandomPost());
   };
 
   const mixAndRandomizePostsAndAds = (posts, ads) => {
@@ -32,15 +30,15 @@ function Timeline() {
   useEffect(() => {
     const getAdList = async ()=>{
       try {
-        const data = await getDocs(productCollectionRef)
-        const filteredData = data.docs.map((doc)=>({...doc.data(), id: doc.id}));
+        const response = await axios.get(`http://localhost:5000/get_ads/${user.email}`);
+        const filteredData = response.data;
         const randomPosts = fetchRandomPosts();
         const combinedPosts = mixAndRandomizePostsAndAds(filteredData,randomPosts);
 
         // Update the state with the combined data
         setPosts(combinedPosts);
       } catch (error) {
-        console.error(error);
+        console.error('Error fetching ads:', error);
       }
     };  
     getAdList();
@@ -64,7 +62,7 @@ function Timeline() {
           price =  {post.price}
           image_url = {post.image_url}
           ad_url= {post.link}
-          personalizedText={"hello wasi see this"}
+          personalizedText={post.personalizedText}
             />)}
         </div>
       </div>
